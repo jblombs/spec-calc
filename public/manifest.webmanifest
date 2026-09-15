@@ -1,0 +1,17 @@
+{
+  "name": "SpecCalc",
+  "short_name": "SpecCalc",
+  "description": "Professional calculators for architecture and construction",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1520",
+  "theme_color": "#0b1520",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
