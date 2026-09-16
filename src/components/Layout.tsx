@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 
 function navClass({ isActive }: { isActive: boolean }) {
@@ -7,10 +7,23 @@ function navClass({ isActive }: { isActive: boolean }) {
 
 export function Layout() {
   const { settings, setTheme, activeProject } = useApp();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === '/';
 
   return (
     <div className="app-shell">
       <header className="topbar no-print">
+        {!isHome && (
+          <button
+            type="button"
+            className="btn-back"
+            onClick={() => navigate('/')}
+            aria-label="Back to dashboard"
+          >
+            ← Back
+          </button>
+        )}
         <NavLink to="/" className="brand">
           <span className="brand-mark">SC</span>
           <span>SpecCalc</span>

@@ -104,6 +104,25 @@ textarea {
   backdrop-filter: blur(8px);
 }
 
+.btn-back {
+  flex-shrink: 0;
+  min-height: 44px;
+  min-width: 72px;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--bg-card);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-back:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
 .brand {
   display: flex;
   align-items: center;
